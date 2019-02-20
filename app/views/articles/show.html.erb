@@ -12,31 +12,31 @@
 <%= render @article.comments %>
   <!-- <p>
     <strong>Commenter:</strong>
-    <%= comment.commenter %>
+    <%# comment.commenter %>
   </p>
 
   <p>
     <strong>Comment:</strong>
-    <%= comment.body %>
+    <%# comment.body %>
   </p>
-<% end %> -->
+<%# end %> -->
 
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-<!-- <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+<!-- <%# form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+    <%# form.label :commenter %><br>
+    <%# form.text_field :commenter %>
   </p>
   <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%# form.label :body %><br>
+    <%# form.text_area :body %>
   </p>
   <p>
-    <%= form.submit %>
+    <%# form.submit %>
   </p>
-<% end %> -->
+<%# end %> -->
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= button_to 'Edit', edit_article_path(@article), :method => :get %>
+<%= button_to 'Back', articles_path, :method => :get %>
